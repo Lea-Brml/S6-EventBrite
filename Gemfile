@@ -5,6 +5,7 @@ ruby '2.5.1'
 
 gem 'faker'
 gem 'table_print'
+gem 'dotenv-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -52,6 +53,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+gem "letter_opener", :group => :development
 
 group :test do
   # Adds support for Capybara system testing and selenium driver

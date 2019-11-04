@@ -1,6 +1,12 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  #lignes pour envoyer les mails en LOCAL
+
+  #config.action_mailer.delivery_method = :letter_opener     #n la désactive pour heroku, utilie qu'n local
+
+  config.action_mailer.perform_deliveries = true
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
