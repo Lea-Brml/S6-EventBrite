@@ -3,7 +3,7 @@ Rails.application.configure do
 
   #lignes pour envoyer les mails en LOCAL
 
-  #config.action_mailer.delivery_method = :letter_opener     #n la désactive pour heroku, utilie qu'n local
+  config.action_mailer.delivery_method = :letter_opener     #n la désactive pour heroku, utilie qu'n local
 
   config.action_mailer.perform_deliveries = true
 

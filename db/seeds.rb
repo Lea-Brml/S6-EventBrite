@@ -22,13 +22,17 @@ e = []
   u << user
   puts user
 
-  event = Event.create(start_date: Faker::Date.forward(days: 28) , duration: chiffre_multiple_5.sample , title: Faker::Beer.name , description: Faker::Lorem.sentence(word_count: 10) , price: Faker::Number.between(from: 2, to: 999) , location: Faker::Address.city)
+end
+
+1.times do |index|
+
+  event = Event.create(start_date: Faker::Date.forward(days: 28) , duration: chiffre_multiple_5.sample , title: Faker::Beer.name , description: Faker::Lorem.sentence(word_count: 10) , price: Faker::Number.between(from: 2, to: 999) , location: Faker::Address.city, administrator: u.sample)
   e << event
-  puts user
+  puts event
 
 end
 
-5.times do |index|
+10.times do |index|
 
   Attendance.create(user: u.sample , event: e.sample)
 
